@@ -1,0 +1,48 @@
+/* Reset CSS */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, blockquote, hr, figure, figcaption, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Global Typography */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; /* Default text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif; /* Inherits body font */
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.83em; }
+h6 { font-size: 0.67em; }
+
+/* Links */
+a {
+  color: #007bff; /* Default link color */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Basic Layout */
+.container {
+  width: 90%;
+  margin: 0 auto; /* Center container */
+}
+
+/* Add more styles as needed */
