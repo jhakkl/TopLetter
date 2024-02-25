@@ -4,8 +4,8 @@
       <div class="text-white text-2xl font-bold">TopLetter</div>
       <ul class="flex space-x-4">
         <li class="text-white">Home</li>
-        <li class="text-white">Tasks</li>
         <li class="text-white">Settings</li>
+        <li class="text-white">About</li>
       </ul>
     </nav>
   </div>
@@ -16,6 +16,15 @@
         <p> says... </p>
       </div>
       <p>{{this.fix(this.topLetter)}}</p>
+    </div>
+  </div>
+
+  <div class="content-center justify-center h-screen flex items-center ">
+    <div class="rounded-md bg-stonelight w-1/4 flex justify-center items-center p-4 flex-col">
+      <p class="font-bold mb-2 mt-1">Would you like to set the TopLetter?</p>
+      <input type="text" class="border border-gray-300 px-2 py-1 mt-2" placeholder="Your Name" [(ngModel)]="uploadName">
+      <input class="border border-gray-300 px-2 py-1 mt-2" placeholder="Enter text" [(ngModel)]="uploadTopLetter">
+      <button class="bg-jeykll-69 hover:bg-green-700 text-white font-bold py-2 px-4 mt-2 rounded shadow-md" (click)="saveText()">Save</button>
     </div>
   </div>
 </div>

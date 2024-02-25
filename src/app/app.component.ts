@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {fetchData} from "./mainApi";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore,doc, setDoc } from "firebase/firestore";
 
 
 @Component({
@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'TopLetter';
   topLetter: string = "Loading...";
   name:string = "Loading...";
+  gdb: any = null;
 
   async ngOnInit(): Promise<void> {
     const firebaseConfig = {
@@ -30,6 +31,7 @@ export class AppComponent {
 
 // Initialize Cloud Firestore and get a reference to the service
     const db = getFirestore(app);
+    this.gdb = db;
 
 
     let q: string[] = await fetchData(db);
@@ -42,6 +44,24 @@ export class AppComponent {
 
   fix(inVar: string): string {
     return "\"" + inVar + "\"";
+  }
+
+
+  uploadName: string = "";
+  uploadTopLetter: string = "";
+
+
+
+  async saveText(): Promise<void> {
+    console.log("Save Text Activated")
+    await setDoc(doc(this.gdb, "topletterdata/data"), {
+      currentTopLetter: this.uploadTopLetter,
+      currentUser: this.uploadName
+    });
+
+    location.reload();
+
+
   }
 
 

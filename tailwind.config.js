@@ -8,16 +8,10 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
-      'purple': '#3f3cbb',
-      'midnight': '#121063',
-      'metal': '#565584',
-      'tahiti': '#3ab7bf',
-      'silver': '#ecebff',
-      'bubble-gum': '#ff77e9',
-      'bermuda': '#78dcca',
       'stone': '#dedede',
       'stonelight': '#d0d0d0',
-      'jeykll-69': '#78208d'
+      'jeykll-69': '#78208d',
+      'jeykll-6699': '#4d1357'
     },
     extend: {},
   },
